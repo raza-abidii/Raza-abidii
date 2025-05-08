@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Raza-husain
+- 👋 Hi, I’m @Raza-abidi
 - 👀 I’m interested in blockchain and cyber security
 - 🌱 I’m currently learning python
 - 💞️ I’m looking to collaborate on anything realted to web and AI
