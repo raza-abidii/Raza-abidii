@@ -7,29 +7,18 @@ Raza-husain/Raza-husain is a ✨ special ✨ repository because its `README.md` 
 You can click the Preview link to take a look at your changes.
 --->
 ```mermaid
-classDiagram
-    class MainApp {
-        +load_model()
-        +predict(image)
-        +display_results()
-        +get_info(prediction, score)
-    }
-    class disease_info.py {
-        plant_diseases_info
-    }
-    class User {
-        +upload_image()
-        +view_results()
-    }
-    class Model {
-        <<ML Model>>
-        +predict(image)
-    }
-
-    User --|> MainApp : interacts
-    MainApp --> Model : uses
-    MainApp --> disease_info.py : imports
-    MainApp --> User : displays results
-    Model <.. MainApp : prediction
-    disease_info.py <.. MainApp : disease info lookup
+flowchart TD
+    A(User opens Web App) --> B(Sidebar: Select Page)
+    B --> C{Which Page?}
+    C -- Home --> D(Show Home Info & Image)
+    C -- About --> E(Show Dataset Info)
+    C -- Disease Recognition --> F(Upload Plant Image)
+    F --> G{Image Uploaded?}
+    G -- No --> H(Prompt to Upload Image)
+    G -- Yes --> I(Show Uploaded Image)
+    I --> J(User Clicks Predict)
+    J --> K(Run model_prediction)
+    K --> L(Get Prediction & Confidence)
+    L --> M(Show Disease Name)
+    M --> N(Show Disease Info & Recommendations)
 ```
